@@ -1,12 +1,22 @@
-let button = document.getElementById("button");
-let demo = document.getElementById("demo");
+let button = document.getElementById('button');
+let demo = document.getElementById('demo');
+let reset = document.getElementById('reset');
+let hidden = document.getElementById('hidden')
+
+reset.style.display = 'none';
+hidden.style.display = 'none';
+
 
 function myFunction() {
+  let first = document.getElementById('firstName').value;
+  let last = document.getElementById('lastName').value;
+  let maiden = document.getElementById('maidenName').value;
+  let city = document.getElementById('cityName').value;
 
-    var first = document.getElementById("firstName").value;
-    var last = document.getElementById("lastName").value;
-    var maiden = document.getElementById("maidenName").value;
-    var city = document.getElementById("cityName").value;
+  if (first==='' || last==='' || maiden==='' || city==='') {
+    demo.innerHTML = '';
+    window.alert('Please ensure all fields are completed and re-click to create!');
+  } else {
 
     let firstArr = first.split('');
     console.log(firstArr);
@@ -21,10 +31,12 @@ function myFunction() {
     let lastSyl = `${lastArr[0]}${lastArr[1]}`;
     let maidenSyl = `${maidenArr[0]}${maidenArr[1]}`;
     let citySyl = `${cityArr[0]}${cityArr[1]}${cityArr[2]}`;
-    let starWarsName = `${firstSyl}${lastSyl}  ${maidenSyl}${citySyl}`;
+    let starWarsName = `Your Star Wars name is: <br>'${firstSyl}${lastSyl}  ${maidenSyl}${citySyl}'`;
     
     demo.innerHTML = starWarsName;
-  }
+    button.style.display ='none';
+    reset.style.display = '';
+  };
+}
 
-button.addEventListener("click", myFunction);
-
+button.addEventListener('click', myFunction);

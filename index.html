@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test App</title>
+    <title>Star Wars Name</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <div id="main">
-      <h1 class="header" id="header1">Star Wars Name Generator</h1>
-      <image class="header" id="header2" src="./Images/body.jpg" alt="lego Darth"></image>
+      <p id="header1">Star Wars Name Generator</p>
+      <image id="header2" src="./Images/body.jpg" alt="lego Darth"></image>
     </div>
 
     <button id="reset" onClick="window.location.reload();">Click Here to Reset</button>
     
-    <h2>To find your Star Wars name, take: 
-    <br>The first 3 letters of your first name
-    <br>The first 2 letters of your last name
-    <br>The first 2 letters of your mothers maiden name
-    <br>The first 3 letters of the city/town you were born in
-    </h2>
+    <div id="hidden">
+      <h2>To find your Star Wars name, take: 
+      <br>
+      The first 3 letters of your first name
+      <br>
+      The first 2 letters of your last name
+      <br>
+      The first 2 letters of your mothers maiden name
+      <br>
+      The first 3 letters of the city/town you were born in
+      </h2>
+    </div>
     
-    <h1>Enter the detail into the relevant fields below to discover your Star Wars name!</h1>
-      
-    <div id="inputFields">
-      <label for="firstName"><h1>First Name</h1></label>
-      <input id="firstName" type="text" required>
+    <br>
+    <br>
  
-      <label for="lastName"><h1>Last Name</h1></label>
-      <input id="lastName" type="text" required>
-
-      <label for="maidenName"><h1>Mothers Maiden Name</h1></label>
-      <input id="maidenName" type="text" required>
-
-      <label for="cityName"><h1>City Name</h1></label>
-      <input id="cityName" type="text" required>
-    </div>
-
+    <h2>Enter the relevant detail into the fields below then Click to discover your Star Wars name!</h2>
+    
     <br>
     <br>
+    <br>
+
+    <div id = "container">
+      <div id="inputFields">
+        <label for="firstName"><h2>First Name</h2></label>
+        <input id="firstName" type="text" required autocomplete="off">
+ 
+        <label for="lastName"><h2>Last Name</h2></label>
+        <input id="lastName" type="text" required autocomplete="off">
+
+        <label for="maidenName"><h2>Mothers Maiden Name</h2></label>
+        <input id="maidenName" type="text" required autocomplete="off">
+
+        <label for="cityName"><h2>Birth City Name</h2></label>
+        <input id="cityName" type="text" required autocomplete="off">
+      </div>
+
+      <br>
+      <br>
    
-    <button id="button">Click Here to Create!</button>
+      <button id="button">Click Here!</button>
     
-    <br>
-    <br>
+      <br>
+      <br>
     
-    <div id="output">
-      <p id="demo"></p>
+      <div id="output">
+        <p id="demo"></p>
+      </div>
     </div>
-    
-    <br>
-    <br>
-
 
     <script type="text/javascript" src="script.js"></script>
 </body>
